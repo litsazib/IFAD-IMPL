@@ -1,0 +1,109 @@
+
+.margin{
+    padding-top: 130px;
+    color: #F6821F;
+    padding-left: 15px;
+    font-size: 20px;
+    font-family: 'open sans bold';
+}
+.margintwo{
+    color: #F6821F;
+    padding-left: 15px;
+    font-size: 20px;
+    font-family: 'open sans bold';
+}.awardItem{
+    height: 320px;
+    border-radius: 0;
+    position: relative;
+}
+
+.imgheight{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.awardText{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    color: #fff;
+    padding: 30px 30px 30px 50px;
+}
+.name{
+    color: #F6821F;
+    font-weight: 700;
+}
+.possition{
+    margin-bottom: 10px;
+}
+
+
+.award {
+	background-size: cover;
+	height: 400px;
+	position: relative;
+}
+.bgimg {
+	width: 100%;
+	height: 400px;
+	object-fit: cover;
+	background: #000;
+    z-index: 1000;
+}
+.award::after{
+	position: absolute;
+	content: '';
+	top: 0;
+	left: 0;
+	background-color: rgba(228, 227, 227, 0.5);
+	height: 400px;
+	width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

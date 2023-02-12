@@ -1,0 +1,92 @@
+
+.h50 {
+	color:#fff
+}
+@font-face {
+	font-family: 'Noto-Sans';
+	src: url(../assets/fonts/NotoSans-Black.ttf);
+}
+.font-noto {
+	font-family: 'Noto Sans';
+}
+@font-face {
+	font-family: 'Calibri';
+	src: url(../assets/fonts/Calibri-Regular.ttf);
+}
+.font-calibri {
+	font-family: 'Calibri';
+}
+@font-face {
+	font-family: 'Corda';
+	src: url(../assets/fonts/CordaW01Regular.ttf);
+}
+.font-Corda {
+	font-family: 'Calibri';
+}
+.left-line {
+	border-right: 2px solid #ffa500;
+}
+.who {
+	font-size: 48px;
+	font-family: 'Corda';
+	text-align: left;
+	padding-bottom: 30px;
+	vertical-align: baseline;
+}
+.content {
+	font-size: 18px;
+	font-family: 'Corda';
+	text-align: left;
+	text-align: justify;
+	color: #666;
+}
+.backgroundc {
+	background: #f7f7f7;
+}
+.button {
+	border: 1px solid #000;
+	padding: 15px 30px;
+	text-decoration: none;
+	text-transform: capitalize;
+	border-radius: 0;
+	background: transparent;
+	margin-top: 20px;
+	margin-bottom: 35px;
+	color: #000;
+	font-family: 'corda';
+	transition: all linear 0.3s;
+}
+.button:hover {
+	color: #000;
+	background: transparent !important;
+	border: 1px solid #000;
+}
+// .image {
+// 	margin-top: 25px;
+// 	height: 418px;
+// 	width: 360px;
+// }
+.decoration{
+	text-decoration: none;
+}
+.aboutbg {
+	background: linear-gradient(rgba(228, 227, 227, 0.5), rgba(228, 227, 227, 0.5)), url('../public/product_bg.png') no-repeat center;
+	background-size: cover;
+	height: 400px;
+}
+.producttitle {
+	font-size: 16px;
+}
+.product_img {
+	width: 200px;
+	height: 204px;
+	object-fit: cover;
+	margin-top: 20px;
+	object-fit: contain!important;
+	transition: all .3s ease-in-out;
+}
+.product_img:hover {
+	transform: scale(1.1);
+	object-fit: contain!important;
+}
+

@@ -1,0 +1,85 @@
+// element.style {
+//   max-height: 100px;
+//   width: 360px;
+//   flex-wrap: wrap;
+// }
+@font-face {
+	font-family: 'Noto-Sans';
+	src: url(../assets/fonts/NotoSans-Black.ttf);
+}
+.font-noto {
+	font-family: 'Noto Sans';
+}
+@font-face {
+	font-family: 'Calibri';
+	src: url(../assets/fonts/Calibri-Regular.ttf);
+}
+.font-calibri {
+	font-family: 'Calibri';
+}
+@font-face {
+	font-family: 'Corda';
+	src: url(../assets/fonts/CordaW01Regular.ttf);
+}
+.font-Corda {
+	font-family: 'Calibri';
+}
+.left-line {
+	border-right: 2px solid #ffa500;
+}
+.career {
+	font-size: 18px;
+	font-weight: 500;
+	font-family: 'Calibri';
+}
+.nav {
+	margin-left: auto;
+	font-family: 'Calibri';
+	text-transform: uppercase;
+	font-size: 18px;
+	// font-weight: 600;
+    span{
+      transition: all linear 0.3s;
+    }
+    span:hover{
+        color: #e17111;
+    }
+}
+// .nav .navbar-nav .show > .nav-link, .navbar-nav .nav-link.active{
+//     color: #ffa500;
+// }
+.border {
+	padding-right: 10px;
+	border-right: 3px solid #000;
+}
+.product {
+	padding-right: 10px;
+	padding-left: 10px;
+	border-right: 3px solid #000;
+	border-left: 3px solid #000;
+}
+#top{
+	top: 50 !important;
+	left: 50 !important;
+	width: 100% !important;
+	position: fixed;
+    top: 0;
+    z-index: 2;
+	
+}
+.position{
+	// position: absolute;
+	top: 50 !important;
+	left: 50 !important;
+	width: 100% !important;
+	position: fixed;
+    top: 0;
+    z-index: 2;
+}
+.career{
+	color: #000;
+	transition: all linear 0.3s;
+}
+.career:hover{
+	color: #fff;
+}

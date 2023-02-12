@@ -1,0 +1,68 @@
+.multi-product {
+	// width: 270px;
+	height: 100px;
+	background: white;
+	> h5 {
+		padding-bottom: 0px;
+		margin-bottom: 0px;
+	}
+}
+#copyright .dark {
+	background: #000;
+}
+.like {
+	margin-top: 50px;
+	margin-left: 5px;
+}
+// .background {
+// 	background: url(https://i.postimg.cc/c4MXvdpq/stylish-glowing-digital-red-lines-banner-1017-23964.png) no-repeat center;
+// 	background-size: cover;
+// 	border-top: 1px solid #fff;
+// }
+.background {
+	background: (linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url("http://implcms.ifadgroup.com:8080/storage/picture/0_footer1-804903.png")no-repeat);
+	background-size: cover;
+}
+.title {
+	font-size: 14px;
+	padding-top: 20px;
+	padding-left: 0px;
+}
+.like {
+	font-size: 12px;
+}
+.fb_like {
+	font-size: 12px;
+	padding-left: 5px;
+}
+// .back {
+
+// 	// height: 60px;
+// 	// width: 45px;
+// }
+.back {
+	text-decoration: none;
+	height: 45px;
+	width: 45px;
+	line-height: 45px;
+	position: absolute;
+	right: 50px;
+	bottom: 11px;
+	// cursor: pointer;
+	z-index: 1000;
+	background: #ffa800;
+	border-radius: 4px;
+}
+.backtotop {
+	color: #fff;
+	font-size: 25px;
+	margin-left: 10px;
+	margin-bottom: 3px;
+}
+.facebookbtn {
+	border: none;
+	overflow: hidden;
+	width: 174px;
+	height: 46px;
+	padding-bottom: 0px;
+}
