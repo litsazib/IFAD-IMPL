@@ -22,13 +22,9 @@ export const isEmpty = (value)=>{
     }
 }
 
+export const linkBreak = (txt,splitChar="[BR]")=>{
+    return txt?.split(splitChar).map(function (text, index) {
+        return <p key={index}>{ text }</p>; 
+    });
+}
 
-// export const isYoutubeUrl = (url)=>{
-//     const getUrl = url
-//     const { hostname } = new URL(getUrl);
-//     if(hostname === 'www.youtube.com'){
-//         return true
-//     }else {
-//         return false
-//     }
-// }

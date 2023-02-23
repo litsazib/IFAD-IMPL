@@ -1,6 +1,7 @@
 import { getcotentModule } from '../../api/';
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
+import {linkBreak} from '../../../utils/common.js'
 
 const LeaderShipDetails = ({ blogDetails }) => {
 	const router = useRouter()
@@ -47,7 +48,7 @@ const LeaderShipDetails = ({ blogDetails }) => {
 							<h2 className="font-calibri fw-bold">{ResultData[0].item_name?ResultData[0].item_name:"Not Found"}</h2>
 							<h4>{ResultData[0].item_short_desc}</h4>
 							<p className="font-poppins justify p-2">
-								{ResultData[0].item_long_desc?ResultData[0].item_long_desc:"Not Found"}
+								{ResultData[0].item_long_desc ? linkBreak(ResultData[0].item_long_desc): "Not Found"}
 							</p>
 						</div>
 						<div className="col-lg-4 col-md-6">

@@ -1,6 +1,7 @@
 import PageAbout from '../../../styles/About.module.scss';
 import BeatLoader from 'react-spinners/BeatLoader';
 import Head from 'next/head';
+import {linkBreak} from '../../../utils/common.js';
 
 const PageMilestone = ({ sendcompanyData }) => {
 	// const bgImg={
@@ -11,7 +12,7 @@ const PageMilestone = ({ sendcompanyData }) => {
 			<div className="row g-4" key={idx}>
 				<div className="col-lg-8 col-md-6">
 					<h2 className="font-calibri fw-bold p-2 font-poppins ">{content.item_name}</h2>
-					<p className="justify p-2">{content.item_long_desc}</p>
+					<p className="justify p-2">{linkBreak(content.item_long_desc)}</p>
 				</div>
 
 				<div className="col-lg-4 col-md-6">
