@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import {linkBreak} from '../../../utils/common.js';
 
 const ReadMore = ({ children }) => {
 	const word = 150;
@@ -9,7 +10,7 @@ const ReadMore = ({ children }) => {
 	};
 	return (
 		<p className="text">
-			{isReadMore ? text.slice(0, word) : text}
+			{isReadMore ? text.slice(0, word) : linkBreak(text)}
 			<span onClick={toggleReadMore} className="read-or-hide">
 				{isReadMore ? '...read more' : ' show less'}
 			</span>
