@@ -10,8 +10,7 @@ server.js
 /.vscode/
 
 #Package
-package-lock.json
-package.json
+
 
 
 # testing
