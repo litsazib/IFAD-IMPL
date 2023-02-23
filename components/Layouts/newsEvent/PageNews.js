@@ -2,7 +2,6 @@ import MediaStyle from '../../../styles/Media.module.scss';
 // import BeatLoader from "react-spinners/BeatLoader";
 import Link from 'next/link';
 import Show from '../../Layouts/newsEvent/Show';
-import {linkBreak} from '../../../utils/common.js';
 
 const PageNews = ({ sendNewsData }) => {
 	const newsEvents = sendNewsData.content_item;
@@ -20,7 +19,7 @@ const PageNews = ({ sendNewsData }) => {
 								{/* <p className="font-noto pb-3 display-6 m-0 text-secondary">Date: {ctx.item_date}</p> */}
 
 								<h6 className='pb-3 news-title-size'>
-									<Show details={linkBreak(ctx.item_long_desc)} />
+									<Show details={ctx.item_long_desc} />
 								</h6>
 							</div>
 						</div>
