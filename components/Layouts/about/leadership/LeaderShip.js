@@ -20,7 +20,7 @@ const LeaderShip = ({ sendLeaderData }) => {
 							</Link>
 						</div>
 						<h3 className={PageAbout.leaderName}>{item.item_name}</h3>
-						<p className={PageAbout.titledesign}>{item.item_short_desc}</p>
+						<p className={PageAbout.titledesign}>{item.item_short_desc}, IFAD Group</p>
 					</div>
 				</div>
 			)
@@ -61,10 +61,10 @@ const LeaderShip = ({ sendLeaderData }) => {
 
 			<section>
 				<div className="container">
-				<h1 className=" display-1 fw-bold text-center mt-5">
+				<h1 className=" display-1 fw-bold text-center mt-5 mb-5">
 					{sendLeaderData?.module_name ? sendLeaderData?.module_name : <BeatLoader color="#FA3" />}
 				</h1>
-					<h1 className={PageAbout.leader_title}>{sendLeaderData?.module_description}</h1>
+					{/* <h1 className={PageAbout.leader_title}>{sendLeaderData?.module_description}</h1> */}
 					<div className="row g-4 justify-content-md-center">
 						{topLeader ? topLeader : <h1 className="text-center">Loading...</h1>}
 					</div>
