@@ -38,6 +38,7 @@
     "react-readmore": "^1.0.2",
     "react-redux": "^8.0.4",
     "react-responsive-carousel": "^3.2.23",
+    "react-responsive-modal": "^6.4.1",
     "react-scroll-effects": "^1.0.13",
     "react-slick": "^0.29.0",
     "react-spinners": "^0.13.7",

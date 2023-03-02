@@ -1,11 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
+import ReactDOM from 'react-dom';
 import PageAbout from '../../../../styles/About.module.scss';
 import BeatLoader from 'react-spinners/BeatLoader';
 import Link from 'next/link';
 import Head from 'next/head';
-import TeamToggle from './TeamToggle';
+import 'react-responsive-modal/styles.css';
+import { Modal } from 'react-responsive-modal';
 
 const LeaderShip = ({ sendLeaderData,md,leader_team }) => {
+
 	const LeaderShip = sendLeaderData?.content_item;
 
 	const mdLoop = md?.content_item.map((ctx,idx)=>{
@@ -78,7 +81,6 @@ const LeaderShip = ({ sendLeaderData,md,leader_team }) => {
 			</Head>
 			<section className={PageAbout.productbg}>
 				<img src={sendLeaderData?.module_image} alt="" className={PageAbout.bgimg} />
-
 			</section>
 
 			<section>
