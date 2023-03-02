@@ -1225,8 +1225,15 @@ span.contact-button {
 	color: red;
  }
  .new-leadership-team{
-	height: 350px;
+	height: 320px;
 	width: 300px;
+	object-fit: cover;
+	border: 2px solid rgb(255 205 0);
+	border-radius: 10px;
+ }
+ .new-team-member{
+	height: 200px;
+	width: 180px;
 	object-fit: cover;
 	border: 2px solid rgb(255 205 0);
 	border-radius: 10px;

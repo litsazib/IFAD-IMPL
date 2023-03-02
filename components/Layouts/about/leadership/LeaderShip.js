@@ -96,12 +96,33 @@ const LeaderShip = ({ sendLeaderData }) => {
 			<section>
 				<div className="contaier">
 					<div className="d-flex justify-content-around">
-						<div className="">
-							<TeamToggle/>
-							</div>
-						<div className="">s</div>
-						<div className="">c</div>
-						<div className="">c</div>
+						<div className="text-center">
+							{/* <TeamToggle/> */}
+							<img src="https://i.postimg.cc/yxTVRN3L/download.jpg" className="new-team-member"/>
+							<h4 className="pt-2 m-0">Name</h4>
+							<p className="">Designation, Ifad Group</p>
+						</div>
+						
+						<div className="text-center">
+							{/* <TeamToggle/> */}
+							<img src="https://i.postimg.cc/yxTVRN3L/download.jpg" className="new-team-member"/>
+							<h4 className="pt-2 m-0">Name</h4>
+							<p className="">Designation, Ifad Group</p>
+						</div>
+
+						<div className="text-center">
+							{/* <TeamToggle/> */}
+							<img src="https://i.postimg.cc/yxTVRN3L/download.jpg" className="new-team-member"/>
+							<h4 className="pt-2 m-0">Name</h4>
+							<p className="">Designation, Ifad Group</p>
+						</div>
+
+						<div className="text-center">
+							{/* <TeamToggle/> */}
+							<img src="https://i.postimg.cc/yxTVRN3L/download.jpg" className="new-team-member"/>
+							<h4 className="pt-2 m-0">Name</h4>
+							<p className="">Designation, Ifad Group</p>
+						</div>
 					</div>
 				</div>
 			</section>
