@@ -3,15 +3,27 @@ import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import {linkBreak} from '../../../utils/common.js'
 
-const LeaderShipDetails = ({ blogDetails }) => {
+const LeaderShipDetails = () => {
 	const router = useRouter()
 	const [Details, setDetails] = useState([]);
+	const [DetailsMD, setDetailsMD] = useState([]);
+	const [DetailsTeam, setDetailsTeam] = useState([]);
 
 	let listOfData = Details[0]?.content_item
-	
+	let listOfMdData =  DetailsMD[0]?.content_item
+	let listOfTemeData = DetailsTeam[0]?.content_item
+
+	let combinedArray = []
+	if(typeof listOfData != 'undefined' && listOfData.length > 0 && typeof listOfMdData != 'undefined' && listOfMdData.length > 0 && typeof listOfTemeData != 'undefined' && listOfTemeData.length > 0) {
+		combinedArray.push(...listOfData, ...listOfMdData, ...listOfTemeData)
+		console.log(combinedArray)
+	}
+
+
+
 	const pid = router.query.id
 	
-	let ResultData = listOfData?.filter((ctx)=>{
+	let ResultData = combinedArray?.filter((ctx)=>{
 		return ctx.id ===  parseInt(pid)
 	})
 
@@ -20,6 +32,12 @@ const LeaderShipDetails = ({ blogDetails }) => {
 			let moduleId = 1; // module id = AboutPage->Leadership
 			getcotentModule(moduleId).then((Result) => {
 				setDetails(Result);
+			});
+			getcotentModule(18).then((Result) => {
+				setDetailsMD(Result);
+			});
+			getcotentModule(19).then((Result) => {
+				setDetailsTeam(Result);
 			});
 		} catch (error) {
 			console.log(error);

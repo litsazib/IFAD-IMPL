@@ -12,11 +12,15 @@ const LeaderShip = ({ sendLeaderData,md,leader_team }) => {
 	const LeaderShip = sendLeaderData?.content_item;
 
 	const mdLoop = md?.content_item.map((ctx,idx)=>{
-		const {item_name,item_image,item_short_desc,item_long_desc} = ctx
+		const {item_name,item_image,item_short_desc,item_long_desc,id} = ctx
 		return (
 			<>
 				<div className="text-center mb-5">
-					<img src={item_image} className="img-fluid new-leadership-team"/>
+					<Link href={`/about/Leadership/${id}`}>
+						<a>
+						<img src={item_image} className="img-fluid new-leadership-team"/>
+						</a>
+					</Link>
 					<h2 className="pt-2 m-0">{item_name}</h2>
 					<p className="">{item_short_desc}</p>
 				</div>
@@ -24,13 +28,19 @@ const LeaderShip = ({ sendLeaderData,md,leader_team }) => {
 		)
 	})
 	const leader_team_Loop = leader_team?.content_item.map((ctx,idx)=>{
-		const {item_name,item_image,item_short_desc,item_long_desc} = ctx
+		const {item_name,item_image,item_short_desc,item_long_desc,id} = ctx
 		return (
 			<>
+				<div className='col-lg-3'>
 				<div className="text-center">
-					<img src={item_image} className="new-team-member"/>
+				<Link href={`/about/Leadership/${id}`}>
+					<a>
+						<img src={item_image} className="new-team-member"/>
+					</a>
+				</Link>
 					<h4 className="pt-2 m-0">{item_name}</h4>
 					<p className="">{item_short_desc}</p>
+				</div>
 				</div>
 			</>
 		)
@@ -109,7 +119,9 @@ const LeaderShip = ({ sendLeaderData,md,leader_team }) => {
 			<section>
 				<div className="contaier">
 					<div className="d-flex justify-content-around">
+						<div className='row'>
 						{leader_team_Loop}
+						</div>
 					</div>
 				</div>
 			</section>
