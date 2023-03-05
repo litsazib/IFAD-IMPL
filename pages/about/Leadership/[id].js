@@ -19,8 +19,6 @@ const LeaderShipDetails = () => {
 		console.log(combinedArray)
 	}
 
-
-
 	const pid = router.query.id
 	
 	let ResultData = combinedArray?.filter((ctx)=>{
@@ -65,9 +63,12 @@ const LeaderShipDetails = () => {
 						<div className="col-lg-8 col-md-6">
 							<h2 className="font-calibri fw-bold">{ResultData[0].item_name?ResultData[0].item_name:"Not Found"}</h2>
 							<h4>{ResultData[0].item_short_desc}</h4>
-							<p className="font-poppins justify p-2">
+							<p className="font-poppins justify">
 								{ResultData[0].item_long_desc ? linkBreak(ResultData[0].item_long_desc): "Not Found"}
 							</p>
+							<button className='btn customBtn' type="button" onClick={() => router.back()}>
+								Click here to go back
+							</button> 
 						</div>
 						<div className="col-lg-4 col-md-6">
 							<img

@@ -119,6 +119,15 @@ a {
 	color: #e17111;
 	transition: 0.3s;
 }
+.customBtn {
+	background: #f5821f;
+	color: #fff;
+	text-transform: capitalize;
+}
+.customBtn:hover {
+	background-color: #ff0080;
+	color: #fff;
+}
 // .noLink {
 // 	color: #000 !important;
 // }
