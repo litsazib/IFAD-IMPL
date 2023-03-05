@@ -70,7 +70,9 @@
 	text-decoration: none;
 }
 .aboutbg {
-	background: linear-gradient(rgba(228, 227, 227, 0.5), rgba(228, 227, 227, 0.5)), url('../public/product_bg.png') no-repeat center;
+	background: linear-gradient(rgba(228, 227, 227, 0.5), rgba(228, 227, 227, 0.5));
+	background-image: url('../public/catalog-bg.png');
+	background-repeat: no-repeat;
 	background-size: cover;
 	height: 400px;
 }

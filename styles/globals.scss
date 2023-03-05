@@ -707,6 +707,13 @@ a.Footer_back__V_8_e {
 	top: 50%;
 	z-index: 1;
 }
+.vertical-align-mid {
+	position: relative;
+	left: 50%;
+	transform: translate(-50%);
+	top: 50%;
+	z-index: 1;
+}
 .leadership-align {
 	position: relative !important;
 }

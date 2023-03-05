@@ -2,7 +2,6 @@ import React from 'react'
 import { useState } from 'react'
 import { useRouter } from 'next/router';
 import { getProductList,getCatagoryList} from '../api/';
-import ProductBanner from '../../components/Layouts/product/ProductBanner'
 import ProductCard from '../../components/Layouts/product/ProductCard'
 import Head from 'next/head';
 
@@ -19,7 +18,6 @@ const Product = ({productList,calagoyList}) => {
     	<Head>
 				<title>Product | IFAD Multi-product</title>
 			</Head>
-      <ProductBanner/>
       <ProductCard products={productData} catagorys={catagoryData}/>
     </>
   )
