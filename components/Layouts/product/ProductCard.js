@@ -4,9 +4,12 @@ import { useState , useEffect} from 'react';
 import { limitTxt } from '../../../utils/common.js';
 import ReactPaginate from 'react-paginate';
 import ProductB from '../../../styles/Product.module.scss';
+import ProductBg from '../../../styles/Product.module.scss';
 import { BsArrowRight } from 'react-icons/bs';
 
 const ProductCard = ({ products, catagorys }) => {
+
+	const [catBG,setcatBG] = useState([]);
 
 	useEffect(()=>{
 		var btns = document.getElementsByClassName("btnPrdCat");
@@ -20,7 +23,6 @@ const ProductCard = ({ products, catagorys }) => {
 			});
 		}
 	},[catagorys,products])
-
 
 	const perPage = 6;
 	const [productData, setproductData] = useState(products.slice(0, perPage));
@@ -60,26 +62,33 @@ const ProductCard = ({ products, catagorys }) => {
 		const result = products.filter((curData) => {
 			return curData.category.name === filterItem;
 		});
+		const catagoryBg = catagorys.filter((cur,idx)=>{
+			return cur.name === filterItem;
+		})
+		setcatBG(catagoryBg)
 		setproductData(result);
 		setProductLength(result.length);
 	};
 
 	const handleShowAllProduct = () => {
-		// var btns = document.getElementsByClassName("activeLink");
-
-		// var showAll = document.getElementsByClassName("allshow");
-		// showAll[0].className = showAll[0].className.replace("activeLink", "");
-		// showAll[0].className += " activeLink";
-
-
-		// btns[0]?.classList.remove("activeLink")
 		setproductData(products.slice(0, perPage));
 		setProductLength(products.length);
 	};
 	const handlePageClick = (e) => {
-		// window.scrollTo(0, 300);
+		window.scrollTo(0, 300);
 		const selectedPage = e?.selected;
 		setproductData(products.slice(selectedPage * perPage, selectedPage * perPage + perPage));
+	};
+
+	let defaultBg = 'http://114.119.172.238:8040/_next/static/media/product_bg.39b07c19.png'
+	let bg = `http://implcms.ifadgroup.com:8080/storage/category-image/${catBG[0]?.image}`;
+	const isDefualt = catBG[0]?.image === undefined ? true : false; 
+	
+	let background = {
+		backgroundImage: `url(${bg})`
+	};
+	let backgroundDefualt = {
+		backgroundImage: `url(${defaultBg})`
 	};
 
 	if (router.isFallback) {
@@ -87,87 +96,88 @@ const ProductCard = ({ products, catagorys }) => {
 	} else {
 		return (
 			<>
-				<section id="side-manu">
-					<div className="container">
-						<h1 className="display-3 fw-bold text-center mt-5">Our Products</h1>
-						<p className="font-poppins text-center p-font mt-3 mb-5">
-							We Are Restocking as Quickly as Possible. Come Back 7/30 to OrderMore of These Flavors
-							<br /> Inspired by the Places You Call Home!
-						</p>
-						<div className="row">
-							<div className="col-lg-3 text-center mt-4">
-								<ul className="list-unstyled text-start">
-									<li className="pt-2 pb-2">
-										<button
-											className="btnPrdCat color text-secondary border-0 fs-18 bg-transparent text-uppercase fw-bold"
-											onClick={handleShowAllProduct}
-										>
-											<BsArrowRight className="me-2"/>All
-										</button>
-									</li>
-									{catagoryList}
-								</ul>
-							</div>
-							<div className="col-lg-9">
-								{productData.length === 0 ? (
-									<h1 className="text-center">
-										<img width={400} height={400} className="mx-auto d-block" src="../no-products.jpg" alt="noprd" />
-									</h1>
-								) : (
-									<div className="row">
-										{productData.map((curElem, idx) => {
-											const { id, product_name, Product_image, product_short_desc } = curElem;
-											return (
-												<div className="col-lg-4 text-center" key={idx}>
-													<Link href="/product/[id]" as={`/product/${id}`}>
-														<a className="text-dark">
-															<div className="border mt-4" style={{height:'330px'}}>
-																<div>
-																	<img src={Product_image} alt={product_name} className={ProductB.product_img} />
-																</div>
-																<h4 className="text-uppercase font-poppins producttitle mt-2">{product_name}</h4>
-																<p className="text-capitalize font-poppins pb-2 m-0 text-secondary display-5 ps-2 pe-2">
-																	{limitTxt(product_short_desc, 50)}
-																</p>
+			<section style={isDefualt ? backgroundDefualt : background} className={ProductBg.aboutbg}></section>
+			<section id="side-manu">
+				<div className="container">
+					<h1 className="display-3 fw-bold text-center mt-5">Our Products</h1>
+					<p className="font-poppins text-center p-font mt-3 mb-5">
+						We Are Restocking as Quickly as Possible. Come Back 7/30 to OrderMore of These Flavors
+						<br /> Inspired by the Places You Call Home!
+					</p>
+					<div className="row">
+						<div className="col-lg-3 text-center mt-4">
+							<ul className="list-unstyled text-start">
+								<li className="pt-2 pb-2">
+									<button
+										className="btnPrdCat color text-secondary border-0 fs-18 bg-transparent text-uppercase fw-bold"
+										onClick={handleShowAllProduct}
+									>
+										<BsArrowRight className="me-2"/>All
+									</button>
+								</li>
+								{catagoryList}
+							</ul>
+						</div>
+						<div className="col-lg-9">
+							{productData.length === 0 ? (
+								<h1 className="text-center">
+									<img width={400} height={400} className="mx-auto d-block" src="../no-products.jpg" alt="noprd" />
+								</h1>
+							) : (
+								<div className="row">
+									{productData.map((curElem, idx) => {
+										const { id, product_name, Product_image, product_short_desc } = curElem;
+										return (
+											<div className="col-lg-4 text-center" key={idx}>
+												<Link href="/product/[id]" as={`/product/${id}`}>
+													<a className="text-dark">
+														<div className="border mt-4" style={{height:'330px'}}>
+															<div>
+																<img src={Product_image} alt={product_name} className={ProductB.product_img} />
 															</div>
-														</a>
-													</Link>
-												</div>
-											);
-										})}
-									</div>
-								)}
-								{productData.length !== 0 ? (
-									<div className="col-lg-12 mx-auto mt-5">
-										<nav className="text-center">
-											<ReactPaginate
-												previousLabel="<Previous"
-												nextLabel="Next>"
-												pageClassName="page-item"
-												pageLinkClassName="page-link"
-												previousClassName="page-item"
-												previousLinkClassName="page-link"
-												nextClassName="page-item"
-												nextLinkClassName="page-link"
-												breakLabel="..."
-												breakClassName="page-item"
-												breakLinkClassName="page-link"
-												pageCount={productsLength / perPage}
-												marginPagesDisplayed={2}
-												pageRangeDisplayed={5}
-												onPageChange={handlePageClick}
-												containerClassName="pagination"
-												activeClassName="active"
-											/>
-										</nav>
-									</div>
-								) : (
-									''
-								)}
-							</div>
+															<h4 className="text-uppercase font-poppins producttitle mt-2">{product_name}</h4>
+															<p className="text-capitalize font-poppins pb-2 m-0 text-secondary display-5 ps-2 pe-2">
+																{limitTxt(product_short_desc, 50)}
+															</p>
+														</div>
+													</a>
+												</Link>
+											</div>
+										);
+									})}
+								</div>
+							)}
+							{productData.length !== 0 ? (
+								<div className="col-lg-12 mx-auto mt-5">
+									<nav className="text-center">
+										<ReactPaginate
+											previousLabel="<Previous"
+											nextLabel="Next>"
+											pageClassName="page-item"
+											pageLinkClassName="page-link"
+											previousClassName="page-item"
+											previousLinkClassName="page-link"
+											nextClassName="page-item"
+											nextLinkClassName="page-link"
+											breakLabel="..."
+											breakClassName="page-item"
+											breakLinkClassName="page-link"
+											pageCount={productsLength / perPage}
+											marginPagesDisplayed={2}
+											pageRangeDisplayed={5}
+											onPageChange={handlePageClick}
+											containerClassName="pagination"
+											activeClassName="active"
+										/>
+									</nav>
+								</div>
+							) : (
+								''
+							)}
 						</div>
 					</div>
-				</section>
+				</div>
+			</section>
 			</>
 		);
 	}
