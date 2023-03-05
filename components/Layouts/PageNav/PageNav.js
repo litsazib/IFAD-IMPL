@@ -59,7 +59,7 @@ const PageNav = ({sendcatagoryItems}) => {
 								</NavDropdown.Item>
 								<NavDropdown.Item className="text-capitalize">
 									<Link href="/about/Leadership">
-										<a>BOD</a>
+										<a>BOD & Leadership Team</a>
 									</Link>
 								</NavDropdown.Item>
 							</NavDropdown>
