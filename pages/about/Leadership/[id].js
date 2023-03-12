@@ -44,9 +44,6 @@ const LeaderShipDetails = () => {
 
 	return (
 		<>
-			{typeof ResultData != 'undefined' &&
-				ResultData.length > 0 ? (
-			<>
 			<section id="company-review" className="About_milestone__C8Zak">
 				<img
 					className="About_bgimg__UzovK img-fluid leader-banner-height"
@@ -57,30 +54,31 @@ const LeaderShipDetails = () => {
 					{/* <h1 className=" display-1 fw-bold text-center align-item-center">{ResultData[0].item_name?ResultData[0].item_name:"Not Found"}</h1> */}
 				</div>
 			</section>
-			<section id="milestone" className="py-5">
-				<div className="container">
-					<div className="row g-4">
-						<div className="col-lg-8 col-md-6">
-							<h2 className="font-calibri fw-bold">{ResultData[0].item_name?ResultData[0].item_name:"Not Found"}</h2>
-							<h4>{ResultData[0].item_short_desc}</h4>
-							<p className="font-poppins justify">
-								{ResultData[0].item_long_desc ? linkBreak(ResultData[0].item_long_desc): "Not Found"}
-							</p>
-							<button className='btn customBtn' type="button" onClick={() => router.back()}>
-								Click here to go back
-							</button> 
-						</div>
-						<div className="col-lg-4 col-md-6">
-							<img
-								src={ResultData[0].item_image?ResultData[0].item_image:"#"}
-								alt={ResultData[0].item_name.toString()}
-								className="img-fluid img-size rounded-5"
-							/>
+			{typeof ResultData != 'undefined' &&
+				ResultData.length > 0 ? (
+				<section id="milestone" className="py-5">
+					<div className="container">
+						<div className="row g-4">
+							<div className="col-lg-8 col-md-6">
+								<h2 className="font-calibri fw-bold">{ResultData[0].item_name?ResultData[0].item_name:"Not Found"}</h2>
+								<h4>{ResultData[0].item_short_desc}</h4>
+								<p className="font-poppins justify">
+									{ResultData[0].item_long_desc ? linkBreak(ResultData[0].item_long_desc): "Not Found"}
+								</p>
+								<button className='btn customBtn' type="button" onClick={() => router.back()}>
+									Click here to go back
+								</button> 
+							</div>
+							<div className="col-lg-4 col-md-6">
+								<img
+									src={ResultData[0].item_image?ResultData[0].item_image:"#"}
+									alt={ResultData[0].item_name.toString()}
+									className="img-fluid img-size rounded-5"
+								/>
+							</div>
 						</div>
 					</div>
-				</div>
-			</section>
-			</>
+				</section>
 				) : ('')
 			}
 		</>
