@@ -132,6 +132,10 @@ a {
 	background-color: #ff0080;
 	color: #fff;
 }
+.img-icon-height{
+	height: 35px;
+	width: 40px;
+}
 // .noLink {
 // 	color: #000 !important;
 // }
@@ -1174,14 +1178,16 @@ span.contact-button {
 
 
 // values section start
-#values{
-    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("http://autoscms.ifadgroup.com:8081/storage/content-module/banner-910600.jpg");
-    width: 100%;
-    height: 400px;
-    background-size: cover;
+
+.values-bg-img{
+	height: 400px;
+	width: 100%;
 }
  .value-align{
-	padding-top: 15%;
+	top: 30%;
+	left: 50%;
+	transform: translate(-50%);
+	z-index: 1;
 }
 .value-content-bg{
 	background: #f68422;
@@ -1190,7 +1196,7 @@ span.contact-button {
 	text-align: justify;
 }
 .space-content{
-	margin-top: -100px;
+	margin-top: -150px;
 	margin-bottom: 125px;
 }
 // values section end 
