@@ -54,6 +54,7 @@ a {
 	font-family: 'Poppins';
 	src: url(../assets/fonts/Poppins-Regular.ttf);
 }
+
 @font-face {
 	font-family: 'open sans';
 	src: url(../assets/fonts/OpenSans-Regular.ttf);
@@ -102,6 +103,9 @@ a {
 .display-8 {
 	font-size: 16px;
 }
+.fw-700{
+	font-weight: 700;
+}
 .f20 {
 	font-size: 20px;
 }
@@ -127,6 +131,10 @@ a {
 .customBtn:hover {
 	background-color: #ff0080;
 	color: #fff;
+}
+.img-icon-height{
+	height: 35px;
+	width: 40px;
 }
 // .noLink {
 // 	color: #000 !important;
@@ -1167,6 +1175,34 @@ span.contact-button {
 	object-fit: contain;
 	border-radius: 15px;
 }
+
+
+// values section start
+
+.values-bg-img{
+	height: 400px;
+	width: 100%;
+}
+ .value-align{
+	top: 30%;
+	left: 50%;
+	transform: translate(-50%);
+	z-index: 1;
+}
+.value-content-bg{
+	background: #f68422;
+}
+.card-align{
+	text-align: justify;
+}
+.space-content{
+	margin-top: -150px;
+	margin-bottom: 125px;
+}
+// values section end 
+
+
+
 .page-link.active,
 .active > .page-link {
 	background-color: #f48221 !important;
