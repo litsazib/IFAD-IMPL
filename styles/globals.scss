@@ -54,6 +54,7 @@ a {
 	font-family: 'Poppins';
 	src: url(../assets/fonts/Poppins-Regular.ttf);
 }
+
 @font-face {
 	font-family: 'open sans';
 	src: url(../assets/fonts/OpenSans-Regular.ttf);
@@ -101,6 +102,9 @@ a {
 }
 .display-8 {
 	font-size: 16px;
+}
+.fw-700{
+	font-weight: 700;
 }
 .f20 {
 	font-size: 20px;
@@ -1167,6 +1171,32 @@ span.contact-button {
 	object-fit: contain;
 	border-radius: 15px;
 }
+
+
+// values section start
+#values{
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("http://autoscms.ifadgroup.com:8081/storage/content-module/banner-910600.jpg");
+    width: 100%;
+    height: 400px;
+    background-size: cover;
+}
+ .value-align{
+	padding-top: 15%;
+}
+.value-content-bg{
+	background: #f68422;
+}
+.card-align{
+	text-align: justify;
+}
+.space-content{
+	margin-top: -100px;
+	margin-bottom: 125px;
+}
+// values section end 
+
+
+
 .page-link.active,
 .active > .page-link {
 	background-color: #f48221 !important;
