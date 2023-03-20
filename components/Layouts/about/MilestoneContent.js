@@ -37,7 +37,7 @@ const PageMilestone = ({ sendcompanyData, ValusData }) => {
             <div className="text-center">
               <img
                 src={valus.item_image}
-                className="mx-4 mt-5 img-icon-height text-center"
+                className="mx-4 mt-5 imgSize text-center"
                 alt={valus.item_name}
               />
             </div>
