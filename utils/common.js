@@ -1,5 +1,5 @@
 export const limitTxt = (txt,number) => {
-    return txt.slice(0,number)
+    return txt.toString().slice(0,number)
 }
 
 export const youtube_parser = (url)=>{

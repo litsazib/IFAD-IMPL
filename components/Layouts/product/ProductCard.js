@@ -137,7 +137,7 @@ const ProductCard = ({ products, catagorys }) => {
 															</div>
 															<h4 className="text-uppercase font-poppins producttitle mt-2">{product_name}</h4>
 															<p className="text-capitalize font-poppins pb-2 m-0 text-secondary display-5 ps-2 pe-2">
-																{limitTxt(product_short_desc, 50)}
+																{product_short_desc}
 															</p>
 														</div>
 													</a>
