@@ -2,7 +2,6 @@ import FormStyle from '../../../styles/ContactForm.module.scss';
 import { getMailDepartments } from '../../../pages/api/';
 import { sendContact } from '../../../pages/api/';
 import { isEmpty } from '../../../utils/common';
-
 import swal from 'sweetalert';
 import { useEffect, useState, useRef } from 'react';
 
