@@ -5,7 +5,9 @@ import { linkBreak } from "../../../utils/common.js";
 import Card from "react-bootstrap/Card";
 import { FiUsers } from "react-icons/fi";
 
-const PageMilestone = ({ sendcompanyData, ValusData }) => {
+const PageMilestone = ({ sendcompanyData,MissionVission,ValusData }) => {
+
+  console.log(MissionVission.content_item)
 
   const contectLoop = sendcompanyData?.content_item.map((content, idx) => {
     return (
@@ -27,6 +29,16 @@ const PageMilestone = ({ sendcompanyData, ValusData }) => {
       </div>
     );
   });
+
+  const MissionVissionLoop = MissionVission?.content_item.map((ctx,idx)=>{
+    return (
+      <section id="missionVission" className="values">
+        <div className="position-relative">
+          <img src={ctx.item_image} alt={ctx.item_name} className="values-bg-img"/>
+        </div>
+      </section>
+    )
+  })
 
   const valusCard = ValusData[0]?.content_item.map((valus, idx) => {
     return (
@@ -73,6 +85,8 @@ const PageMilestone = ({ sendcompanyData, ValusData }) => {
           {contectLoop ? contectLoop : <BeatLoader />}
         </div>
       </section>
+      
+      {MissionVissionLoop?MissionVissionLoop:"loading.."}
 
       {/* values section start */}
 
@@ -92,6 +106,7 @@ const PageMilestone = ({ sendcompanyData, ValusData }) => {
       </section> */}
 
       {/* values section end */}
+
     </>
   );
 };

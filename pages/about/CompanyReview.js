@@ -6,16 +6,21 @@ import { useEffect,useState } from "react"
 const CompanyReview = () => {
   const [companyData,setcompanyData] = useState([])
   const [ValusData,setValusData] = useState([])
+  const [MissionVission,setMissionVission] = useState([])
 
   useEffect(()=>{
     try {
       let moduleId = 7 // module id = AboutPage->CompanyReview
       let ValusId = 20 // module id = AboutPage->CompanyReview
+      let MissionVissionMid = 21; // module id = AboutPage->Mission Vission image 
       getcotentModule(moduleId).then((Result)=>{
         setcompanyData(Result)
       })
       getcotentModule(ValusId).then((Result)=>{
         setValusData(Result)
+      })
+      getcotentModule(MissionVissionMid).then((Result)=>{
+        setMissionVission(Result)
       })
     } catch (error) {
       console.log(error)
@@ -24,7 +29,7 @@ const CompanyReview = () => {
 
   return (
     <>
-      <MileStoneContent ValusData={ValusData} sendcompanyData={companyData[0]}/>
+      <MileStoneContent MissionVission={MissionVission[0]} ValusData={ValusData} sendcompanyData={companyData[0]}/>
     </>
   )
 }
