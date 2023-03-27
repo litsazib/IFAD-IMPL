@@ -6,7 +6,6 @@ import Card from "react-bootstrap/Card";
 import { FiUsers } from "react-icons/fi";
 
 const PageMilestone = ({ sendcompanyData, ValusData }) => {
-  console.log(ValusData[0]?.module_name);
 
   const contectLoop = sendcompanyData?.content_item.map((content, idx) => {
     return (
@@ -79,21 +78,18 @@ const PageMilestone = ({ sendcompanyData, ValusData }) => {
 
       <section id="values" className="values">
         <div className="position-relative">
-          <h1 className="text-center value-align position-absolute text-light">
+          {/* <h1 className="text-center value-align position-absolute text-light">
             {ValusData[0]?.module_name}
-          </h1>
-          <img
-            src={ValusData[0]?.module_image}
-            alt=""
-            className="values-bg-img"
-          />
+          </h1> */}
+          <img src={ValusData[0]?.module_image} alt={ValusData[0]?.module_name} className="values-bg-img"/>
         </div>
       </section>
-      <section id="values-content" className="">
+
+      {/* <section id="values-content" className="">
         <div className="container">
           <div className="row">{valusCard ? valusCard : <BeatLoader />}</div>
         </div>
-      </section>
+      </section> */}
 
       {/* values section end */}
     </>
