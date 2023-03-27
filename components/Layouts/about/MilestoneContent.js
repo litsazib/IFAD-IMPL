@@ -7,8 +7,6 @@ import { FiUsers } from "react-icons/fi";
 
 const PageMilestone = ({ sendcompanyData,MissionVission,ValusData }) => {
 
-  console.log(MissionVission.content_item)
-
   const contectLoop = sendcompanyData?.content_item.map((content, idx) => {
     return (
       <div className="row g-4" key={idx}>
@@ -34,7 +32,7 @@ const PageMilestone = ({ sendcompanyData,MissionVission,ValusData }) => {
     return (
       <section id="missionVission" className="values">
         <div className="position-relative">
-          <img src={ctx.item_image} alt={ctx.item_name} className="values-bg-img"/>
+          <img src={ctx.item_image} alt={ctx.item_name} className="missionVissoo-bg-img"/>
         </div>
       </section>
     )
@@ -85,7 +83,7 @@ const PageMilestone = ({ sendcompanyData,MissionVission,ValusData }) => {
           {contectLoop ? contectLoop : <BeatLoader />}
         </div>
       </section>
-      
+
       {MissionVissionLoop?MissionVissionLoop:"loading.."}
 
       {/* values section start */}
