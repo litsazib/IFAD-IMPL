@@ -100,10 +100,10 @@ const ProductCard = ({ products, catagorys }) => {
 			<section id="side-manu">
 				<div className="container">
 					<h1 className="display-3 fw-bold text-center mt-5">Our Products</h1>
-					<p className="font-poppins text-center p-font mt-3 mb-5">
+					{/* <p className="font-poppins text-center p-font mt-3 mb-5">
 						We Are Restocking as Quickly as Possible. Come Back 7/30 to OrderMore of These Flavors
 						<br /> Inspired by the Places You Call Home!
-					</p>
+					</p> */}
 					<div className="row">
 						<div className="col-lg-3 text-center mt-4">
 							<ul className="list-unstyled text-start">
