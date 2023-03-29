@@ -1180,11 +1180,11 @@ span.contact-button {
 // values section start
 
 .values-bg-img{
-	height: 550px;
+	height: auto;
 	width: 100%;
 }
 .missionVissoo-bg-img{
-	height: 420px;
+	height: auto;
 	width: 100%;
 }
 
@@ -1225,8 +1225,6 @@ span.contact-button {
 }
 .img-size {
 	width: 100% !important;
-	max-height: 450px !important;
-	object-fit: cover;
 }
 
 // resent blog part
