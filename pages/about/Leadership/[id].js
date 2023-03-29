@@ -71,6 +71,7 @@ const LeaderShipDetails = () => {
 							</div>
 							<div className="col-lg-4 col-md-6">
 								<img
+									style={{objectFit: "unset"}}
 									src={ResultData[0].item_image?ResultData[0].item_image:"#"}
 									alt={ResultData[0].item_name.toString()}
 									className="img-fluid img-size rounded-5"
