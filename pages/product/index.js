@@ -7,7 +7,7 @@ import Head from 'next/head';
 
 const Product = ({productList,calagoyList}) => {
   const [productData, setproductData] = useState(productList);
-  const [catagoryData, setcatagoryData] = useState(calagoyList[0].product_category_list);
+  const [catagoryData, setcatagoryData] = useState(calagoyList[0]?.product_category_list);
   const router = useRouter()
   if (router.isFallback) {
     return <div>Loading...</div>

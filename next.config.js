@@ -23,13 +23,13 @@ module.exports = {
 		domains: ["implapi.ifadgroup.com"]
 	},
 	env:{
-		API_BASE_URL:"http://implapi.ifadgroup.com:8000/"
+		API_BASE_URL:"https://implapi.ifadgroup.com/"
 	},
 	serverRuntimeConfig:{
-		API_BASE_URL:"http://implapi.ifadgroup.com:8000/"
+		API_BASE_URL:"https://implapi.ifadgroup.com/"
 	},
 	publicRuntimeConfig:{
-		API_BASE_URL:"http://implapi.ifadgroup.com:8000/"
+		API_BASE_URL:"https://implapi.ifadgroup.com/"
 	}
 
 }

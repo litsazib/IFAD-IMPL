@@ -29,7 +29,7 @@ const ProductCard = ({ products, catagorys }) => {
 	const [productsLength, setProductLength] = useState(products.length);
 
 	const router = useRouter();
-	const catagoryList = catagorys.map((item, idx) => {
+	const catagoryList = catagorys?.map((item, idx) => {
 		const subCatName = item.sub_categories.map((subCat) => {
 			return subCat.name;
 		});
