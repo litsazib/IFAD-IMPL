@@ -8,7 +8,7 @@ import { useEffect, useState } from 'react';
 const Catalogue = () => {
 	const [fileUrl, setfileUrl] = useState([]);
 	const [Loading, setLoading] = useState(true);
-	const GlobalCatalog = fileUrl.find((catagory)=>{
+	const GlobalCatalog = fileUrl?.find((catagory)=>{
 		return catagory.category_name === "Catalogue"
 	})
 	const cataglogBtn = GlobalCatalog?.all_documents?.map((ctx, idx) => {
