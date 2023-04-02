@@ -17,22 +17,18 @@ module.exports = withPWA({
   },
 });
 
-
 module.exports = {
-	images: {
-		domains: ["implapi.ifadgroup.com"]
-	}
-	// env:{
-	// 	API_BASE_URL:"https://implapi.ifadgroup.com/"
-	// },
-	// serverRuntimeConfig:{
-	// 	API_BASE_URL:"https://implapi.ifadgroup.com/"
-	// },
-	// publicRuntimeConfig:{
-	// 	API_BASE_URL:"https://implapi.ifadgroup.com/"
-	// }
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'implcms.ifadgroup.com',
+        pathname: '/storage/content-item/**'
+      },
+      ],
+  },
 
-}
+};
 
 
   

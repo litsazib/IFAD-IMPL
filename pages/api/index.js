@@ -1,6 +1,8 @@
 import axios from "axios";
+const https = require('https');
 //import getConfig from "next/config";
 const BASE_URL ="https://implapi.ifadgroup.com";
+// const BASE_URL ="http://implapi.ifadgroup.com:8000";
 
 
 //const { serverRuntimeConfig,publicRuntimeConfig } = getConfig()
@@ -31,7 +33,10 @@ const BASE_URL ="https://implapi.ifadgroup.com";
 
 export const getProductList = async ()=> {
     let EndPoint=`${BASE_URL}/products`;
-    return axios.get(EndPoint).then((res)=>{
+    const httpsAgent = new https.Agent({
+        rejectUnauthorized: false, 
+    })
+    return axios.get(EndPoint,{ httpsAgent }).then((res)=>{
         if(res.status===200){
             return res.data;
         }
@@ -45,8 +50,11 @@ export const getProductList = async ()=> {
 }
 
 export const getProductDetails = async (id)=> {
+    const httpsAgent = new https.Agent({
+        rejectUnauthorized: false, 
+    })
     let EndPoint=`${BASE_URL}/products/${id}`;
-    return axios.get(EndPoint).then((res)=>{
+    return axios.get(EndPoint,{httpsAgent}).then((res)=>{
         if(res.status===200){
             return res.data;
         }
@@ -60,8 +68,11 @@ export const getProductDetails = async (id)=> {
 }
 
 export const getCatagoryList = async ()=> {
+    const httpsAgent = new https.Agent({
+        rejectUnauthorized: false, 
+    })
     let EndPoint=`${BASE_URL}/categories_with_subcategory`;
-    return axios.get(EndPoint).then((res)=>{
+    return axios.get(EndPoint,{httpsAgent}).then((res)=>{
         if(res.status===200){
             return res.data;
         }
@@ -75,8 +86,11 @@ export const getCatagoryList = async ()=> {
 }
 
 export const getcotentModule = async (mId)=> {
+    const httpsAgent = new https.Agent({
+        rejectUnauthorized: false, 
+    })
     let EndPoint=`${BASE_URL}/content-module/${mId}`;
-    return axios.get(EndPoint).then((res)=>{
+    return axios.get(EndPoint,{httpsAgent}).then((res)=>{
         if(res.status===200){
             return res.data;
         }
@@ -90,8 +104,11 @@ export const getcotentModule = async (mId)=> {
 }
 
 export const getBlog = async ()=> {
+    const httpsAgent = new https.Agent({
+        rejectUnauthorized: false, 
+    })
     let EndPoint=`${BASE_URL}/blogs`;
-    return axios.get(EndPoint).then((res)=>{
+    return axios.get(EndPoint,{httpsAgent}).then((res)=>{
         if(res.status===200){
             return res.data;
         }
@@ -105,8 +122,11 @@ export const getBlog = async ()=> {
 }
 
 export const getBlogDetails = async (id)=> {
+    const httpsAgent = new https.Agent({
+        rejectUnauthorized: false, 
+    })
     let EndPoint=`${BASE_URL}/blogs/${id}`;
-    return axios.get(EndPoint).then((res)=>{
+    return axios.get(EndPoint,{httpsAgent}).then((res)=>{
         if(res.status===200){
             return res.data;
         }

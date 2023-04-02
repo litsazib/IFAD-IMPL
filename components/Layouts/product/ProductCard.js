@@ -80,8 +80,9 @@ const ProductCard = ({ products, catagorys }) => {
 		setproductData(products.slice(selectedPage * perPage, selectedPage * perPage + perPage));
 	};
 
-	let defaultBg = 'http://114.119.172.238:8040/_next/static/media/product_bg.39b07c19.png'
-	let bg = `http://implcms.ifadgroup.com:8080/storage/category-image/${catBG[0]?.image}`;
+	//let defaultBg = 'https://implcms.ifadgroup.com/_next/static/media/product_bg.39b07c19.png'
+	let defaultBg = 'https://implcms.ifadgroup.com/storage/content-item/Factory-458233.jpg'
+	let bg = `https://implcms.ifadgroup.com/storage/category-image/${catBG[0]?.image}`;
 	const isDefualt = catBG[0]?.image === undefined ? true : false; 
 	
 	let background = {
