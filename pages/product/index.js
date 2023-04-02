@@ -32,7 +32,7 @@ export async function getStaticProps() {
       productList,
       calagoyList
      },
-    revalidate: 10 
+    //revalidate: 10 
   };
 }
 
