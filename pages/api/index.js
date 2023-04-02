@@ -1,7 +1,7 @@
 import axios from "axios";
 //import getConfig from "next/config";
 // const BASE_URL ="https://cms.demo.api.net.bd";
-const BASE_URL ="http://implapi.ifadgroup.com:8000";
+const BASE_URL ="https://implapi.ifadgroup.com";
 
 
 //const { serverRuntimeConfig,publicRuntimeConfig } = getConfig()
