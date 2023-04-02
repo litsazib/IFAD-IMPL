@@ -13,7 +13,6 @@ import { useRouter } from 'next/router';
 const PageNav = ({sendcatagoryItems}) => {
 
 	const router = useRouter()
-	console.log(router.pathname)
 
 	const catagoryList = sendcatagoryItems?.map((item)=>{
 		return (

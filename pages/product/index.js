@@ -24,7 +24,7 @@ const Product = ({productList,calagoyList}) => {
 }
 
 export async function getStaticProps() {
-  const productList = (await getProductList()) || [];
+  const productList = (await getProductList());
   const calagoyList = (await getCatagoryList()) || [];
 
   return {
@@ -32,7 +32,7 @@ export async function getStaticProps() {
       productList,
       calagoyList
      },
-    //revalidate: 10 
+    revalidate: 10 
   };
 }
 

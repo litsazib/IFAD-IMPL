@@ -59,7 +59,6 @@ const PageContactForm = () => {
 				ContactNum,
 				Massage,
 			};
-			console.log(data);
 			sendContact(data).then((Result) => {
 				if (Result === true) {
 					reset();
