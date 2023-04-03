@@ -7,8 +7,8 @@ import Carousel from 'react-bootstrap/Carousel';
 import Head from 'next/head';
 
 const OurPageProduct = ({ productDetails }) => {
-	const { product_name, product_long_desc, product_multi_images, product_lifestyle_image} = productDetails;
-
+	const { product_name, product_long_desc, product_multi_images, product_lifestyle_image,Product_image} = productDetails;
+console.log(Product_image)
 	const slideImg = product_multi_images.map((img,idx) => {
 		return (
 			<Carousel.Item interval={1000} key={idx}>
@@ -16,6 +16,7 @@ const OurPageProduct = ({ productDetails }) => {
 			</Carousel.Item>
 		);
 	});
+
 	return (
 		<>
 		  <Head>
@@ -27,7 +28,7 @@ const OurPageProduct = ({ productDetails }) => {
 					<div className="row">
 						<div className="col-lg-6 mt-5">
 							{slideImg.length === 0 ? (
-								<img className="mx-auto d-block " src="../no-products.jpg" alt="noprd" />
+								<img style={{width:"100%"}} src={Product_image} alt={product_name} />
 							) : (
 								<Carousel className="single-product">{slideImg}</Carousel>
 							)}
